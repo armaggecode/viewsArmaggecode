@@ -79,10 +79,66 @@
 				<div class="container-fluid">
 					<h1 class="mt-4 rounded-lg text-light p-3">Products</h1>
 					<div class="container mt-4">
-						<button class="btn btn-default border-info mb-1" type="button"><i class="fas fa-plus mr-2"></i>New product</button>
+						<button class="btn btn-default border-info mb-1" type="button" data-toggle="modal" data-target="#newProduct"><i class="fas fa-plus mr-2"></i>New product</button>
+
+						<!--Modal New Product-->
+						<form id="saveProductData">
+							<div class="modal fade" id="newProduct" tabindex="-1" role="dialog" aria-labelledby="addProduct">
+								<div class="modal-dialog" role="document">
+									<div class="modal-content">
+										<div class="modal-header">
+											<button type="button" class="close ml-0" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+											<h4 class="modal-title" id="addProduct">Add Product</h4>
+										</div>
+										<div class="modal-body pt-0">
+											<div id="datos_ajax_register"></div>
+											<div class="form-group">
+												<input type="number" class="form-control" id="idProduct" name="idProduct" placeholder="ID" hidden>
+											</div>
+											<div class="form-group">
+												<input type="text" class="form-control" id="productCode" name="productCode" placeholder="Product Code" required>
+											</div>
+											<div class="form-group">
+												<input type="text" class="form-control" id="nameProduct" name="nameProduct" placeholder="Product Name" required>
+											</div>
+											<div class="form-group">
+												<input type="text" class="form-control" id="brandID" name="brandID" placeholder="Brand ID" required>
+											</div>
+											<div class="form-group">
+												<input type="number" class="form-control" id="quantity" name="quantity" placeholder="Quantity" required>
+											</div>
+											<div class="form-group">
+												<input type="number" class="form-control" id="purchasePrice" name="purchasePrice" placeholder="Purchase Price" required>
+											</div>
+											<div class="form-group">
+												<input type="number" class="form-control" id="salePrice" name="salePrice" placeholder="Sale Price" required>
+											</div>
+											<div class="form-group">
+												<input type="number" class="form-control" id="unitInStock" name="unitInStock" placeholder="Unit in stock" required>
+											</div>
+											<div class="form-group">
+												<input type="text" class="form-control" id="CategoryID" name="CategoryID" placeholder="Category ID" required>
+											</div>
+											<div class="form-group">
+												<input type="text" class="form-control" id="SupplierID" name="SupplierID" placeholder="Supplier ID" required>
+											</div>
+											<div class="form-group">
+												<textarea class="form-control" name="description" id="description" rows="2"></textarea>
+												<small>Product description</small>
+											</div>
+										</div>
+										<div class="modal-footer pt-0">
+											<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+											<button type="submit" class="btn btn-primary">Add Product</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</form>
+						<!-- / Modal New Product-->
 						<table class="table table-sm-responsive">
 							<thead>
-								<th>ID</th>
+								<th class="d-none">ID</th>
 								<th>ProductCode</th>
 								<th>ProductName</th>
 								<th>BrandID</th>
@@ -96,7 +152,7 @@
 							</thead>
 							<tbody>
 								<tr>
-									<td>1</td>
+									<td class="d-none">1</td>
 									<td>S-235</td>
 									<td>SSD 128 GB</td>
 									<td>Toshiba</td>
@@ -107,173 +163,90 @@
 									<td>1</td>
 									<td>5</td>
 									<td class="text-center">
-										<a href="#"><i class="fas fa-edit text-dark"></i></a>
-										<a href="#"><i class="fas fa-trash text-dark"></i></a>
-									</td>
-								</tr>
-								<tr>
-									<td>2</td>
-									<td>S-235</td>
-									<td>Desktop computer</td>
-									<td>Toshiba</td>
-									<td>250</td>
-									<td>250000</td>
-									<td>370000</td>
-									<td>200</td>
-									<td>1</td>
-									<td>5</td>
-									<td class="text-center">
-										<a href="#"><i class="fas fa-edit text-dark"></i></a>
-										<a href="#"><i class="fas fa-trash text-dark"></i></a>
-									</td>
-								</tr>
-								<tr>
-									<td>3</td>
-									<td>S-235</td>
-									<td>Keyboard backlit</td>
-									<td>Toshiba</td>
-									<td>250</td>
-									<td>250000</td>
-									<td>370000</td>
-									<td>200</td>
-									<td>1</td>
-									<td>5</td>
-									<td class="text-center">
-										<a href="#"><i class="fas fa-edit text-dark"></i></a>
-										<a href="#"><i class="fas fa-trash text-dark"></i></a>
-									</td>
-								</tr>
-								<tr>
-									<td>4</td>
-									<td>S-235</td>
-									<td>Laptop</td>
-									<td>Toshiba</td>
-									<td>250</td>
-									<td>250000</td>
-									<td>370000</td>
-									<td>200</td>
-									<td>1</td>
-									<td>5</td>
-									<td class="text-center">
-										<a href="#"><i class="fas fa-edit text-dark"></i></a>
-										<a href="#"><i class="fas fa-trash text-dark"></i></a>
-									</td>
-								</tr>
-								<tr>
-									<td>5</td>
-									<td>S-235</td>
-									<td>Desktop processor</td>
-									<td>Toshiba</td>
-									<td>250</td>
-									<td>250000</td>
-									<td>370000</td>
-									<td>200</td>
-									<td>1</td>
-									<td>5</td>
-									<td class="text-center">
-										<a href="#"><i class="fas fa-edit text-dark"></i></a>
-										<a href="#"><i class="fas fa-trash text-dark"></i></a>
-									</td>
-								</tr>
-								<tr>
-									<td>6</td>
-									<td>S-235</td>
-									<td>Disco SSD 128 GB</td>
-									<td>Toshiba</td>
-									<td>250</td>
-									<td>250000</td>
-									<td>370000</td>
-									<td>200</td>
-									<td>1</td>
-									<td>5</td>
-									<td class="text-center">
-										<a href="#"><i class="fas fa-edit text-dark"></i></a>
-										<a href="#"><i class="fas fa-trash text-dark"></i></a>
-									</td>
-								</tr>
-								<tr>
-									<td>7</td>
-									<td>S-235</td>
-									<td>Disco SSD 128 GB</td>
-									<td>Toshiba</td>
-									<td>250</td>
-									<td>250000</td>
-									<td>370000</td>
-									<td>200</td>
-									<td>1</td>
-									<td>5</td>
-									<td class="text-center">
-										<a href="#"><i class="fas fa-edit text-dark"></i></a>
-										<a href="#"><i class="fas fa-trash text-dark"></i></a>
-									</td>
-								</tr>
-								<tr>
-									<td>8</td>
-									<td>S-235</td>
-									<td>Disco SSD 128 GB</td>
-									<td>Toshiba</td>
-									<td>250</td>
-									<td>250000</td>
-									<td>370000</td>
-									<td>200</td>
-									<td>1</td>
-									<td>5</td>
-									<td class="text-center">
-										<a href="#"><i class="fas fa-edit text-dark"></i></a>
-										<a href="#"><i class="fas fa-trash text-dark"></i></a>
-									</td>
-								</tr>
-								<tr>
-									<td>9</td>
-									<td>S-235</td>
-									<td>Disco SSD 128 GB</td>
-									<td>Toshiba</td>
-									<td>250</td>
-									<td>250000</td>
-									<td>370000</td>
-									<td>200</td>
-									<td>1</td>
-									<td>5</td>
-									<td class="text-center">
-										<a href="#"><i class="fas fa-edit text-dark"></i></a>
-										<a href="#"><i class="fas fa-trash text-dark"></i></a>
-									</td>
-								</tr>
-								<tr>
-									<td>10</td>
-									<td>S-235</td>
-									<td>Disco SSD 128 GB</td>
-									<td>Toshiba</td>
-									<td>250</td>
-									<td>250000</td>
-									<td>370000</td>
-									<td>200</td>
-									<td>1</td>
-									<td>5</td>
-									<td class="text-center">
-										<a href="#"><i class="fas fa-edit text-dark"></i></a>
-										<a href="#"><i class="fas fa-trash text-dark"></i></a>
-									</td>
-								</tr>
-								<tr>
-									<td>11</td>
-									<td>S-235</td>
-									<td>Disco SSD 128 GB</td>
-									<td>Toshiba</td>
-									<td>250</td>
-									<td>250000</td>
-									<td>370000</td>
-									<td>200</td>
-									<td>1</td>
-									<td>5</td>
-									<td class="text-center">
-										<a href="#"><i class="fas fa-edit text-dark"></i></a>
-										<a href="#"><i class="fas fa-trash text-dark"></i></a>
+										<a href="#" data-toggle="modal" data-target="#updateProd"><i class="fas fa-edit text-dark"></i></a>
+										<a href="#" data-toggle="modal" data-target="#deleteProd"><i class="fas fa-trash text-dark"></i></a>
 									</td>
 								</tr>
 							</tbody>
 						</table>
-
+						<!--Modal update Product-->
+						<form id="updateProductData">
+							<div class="modal fade" id="updateProd" tabindex="-1" role="dialog" aria-labelledby="updateProduct">
+								<div class="modal-dialog" role="document">
+									<div class="modal-content">
+										<div class="modal-header">
+											<button type="button" class="close ml-0" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+											<h4 class="modal-title" id="updateProduct">Update Product</h4>
+										</div>
+										<div class="modal-body pt-0">
+											<div id="datos_ajax_update"></div>
+											<div class="form-group">
+												<input type="number" class="form-control" id="idProductUpd" name="idProductUpd" placeholder="ID" hidden>
+											</div>
+											<div class="form-group">
+												<input type="text" class="form-control" id="productCodeUpd" name="productCodeUpd" placeholder="Product Code" required>
+											</div>
+											<div class="form-group">
+												<input type="text" class="form-control" id="nameProductUpd" name="nameProductUpd" placeholder="Product Name" required>
+											</div>
+											<div class="form-group">
+												<input type="text" class="form-control" id="brandIDUpd" name="brandIDUpd" placeholder="Brand ID" required>
+											</div>
+											<div class="form-group">
+												<input type="number" class="form-control" id="quantityUpd" name="quantityUpd" placeholder="Quantity" required>
+											</div>
+											<div class="form-group">
+												<input type="number" class="form-control" id="purchasePriceUpd" name="purchasePriceUpd" placeholder="Purchase Price" required>
+											</div>
+											<div class="form-group">
+												<input type="number" class="form-control" id="salePriceUpd" name="salePriceUpd" placeholder="Sale Price" required>
+											</div>
+											<div class="form-group">
+												<input type="number" class="form-control" id="unitInStockUpd" name="unitInStockUpd" placeholder="Unit in stock" required>
+											</div>
+											<div class="form-group">
+												<input type="text" class="form-control" id="CategoryIDUpd" name="CategoryIDUpd" placeholder="Category ID" required>
+											</div>
+											<div class="form-group">
+												<input type="text" class="form-control" id="SupplierIDUpd" name="SupplierIDUpd" placeholder="Supplier ID" required>
+											</div>
+											<div class="form-group">
+												<textarea class="form-control" name="description" id="descriptionUpd" rows="2"></textarea>
+												<small>Product description</small>
+											</div>
+										</div>
+										<div class="modal-footer pt-0">
+											<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+											<button type="submit" class="btn btn-primary">Update Product</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</form>
+						<!-- / Modal update Product-->
+						<!--Modal delete Product-->
+						<form action="" method="get" id="deleteProductData">
+							<div class="modal fade" id="deleteProd" tabindex="-1" role="dialog" aria-labelledby="deleteProduct">
+								<div class="modal-dialog" role="document">
+									<div class="modal-content">
+										<div class="modal-header">
+											<input type="hidden" id="IdProductDel" name="IdProductDel">
+											<h4 class="modal-title mt-3" id="deleteProduct">Delete confirmation</h4>
+										</div>
+										<div class="modal-body">
+											<p class="lead text-muted text-center m-2">
+												Are you sure you want to permanently delete this product?
+											</p>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+											<button type="submit" class="btn btn-primary">Yes</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</form>
+						<!-- / Modal delete Product-->
 					</div>
 				</div>
 			</div>

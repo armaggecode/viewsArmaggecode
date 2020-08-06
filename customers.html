@@ -78,7 +78,52 @@
 				<div class="container-fluid">
 					<h1 class="mt-4 rounded-lg text-light p-3">Customers</h1>
 					<div class=" container mt-4">
-						<button class="btn btn-default border-info mb-1" type="button"><i class="fas fa-plus mr-2"></i>New customer</button>
+						<button class="btn btn-default border-info mb-1" type="button" data-toggle="modal" data-target="#newCustomer"><i class="fas fa-plus mr-2"></i>New customer</button>
+						<!--Modal New Customer-->
+						<form id="saveCustomerData">
+							<div class="modal fade" id="newCustomer" tabindex="-1" role="dialog" aria-labelledby="addCustomer">
+								<div class="modal-dialog" role="document">
+									<div class="modal-content">
+										<div class="modal-header">
+											<button type="button" class="close ml-0" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+											<h4 class="modal-title" id="addCustomer">Add Customer</h4>
+										</div>
+										<div class="modal-body">
+											<div id="datos_ajax_register"></div>
+											<div class="form-group">
+												<input type="number" class="form-control" id="idCustomer" name="idCustomer" placeholder="ID" required>
+											</div>
+											<div class="form-group">
+												<input type="text" class="form-control" id="nameCustomer" name="nameCustomer" placeholder="Name" required>
+											</div>
+											<div class="form-group">
+												<input type="text" class="form-control" id="lastNameCustomer" name="lastNameCustomer" placeholder="Lastname" required>
+											</div>
+											<div class="form-group">
+												<input type="text" class="form-control" id="genderCustomer" name="genderCustomer" placeholder="Gender" required>
+											</div>
+											<div class="form-group">
+												<input type="text" class="form-control" id="addressCustomer" name="addressCustomer" placeholder="Address" required>
+											</div>
+											<div class="form-group">
+												<input type="text" class="form-control" id="phoneCustomer" name="phoneCustomer" placeholder="Number Phone" required>
+											</div>
+											<div class="form-group">
+												<input type="email" class="form-control" id="emailCustomer" name="emailCustomer" placeholder="Email" required>
+											</div>
+											<div class="form-group">
+												<input type="text" class="form-control" id="cityCustomer" name="cityCustomer" placeholder="City" required>
+											</div>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+											<button type="submit" class="btn btn-primary">Add Customer</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</form>
+						<!-- / Modal New Customer-->
 						<table class="table table-sm-responsive">
 							<thead>
 								<th>ID</th>
@@ -102,154 +147,86 @@
 									<td>john@gmail.com</td>
 									<td>3</td>
 									<td class="text-center">
-										<a href="#"><i class="fas fa-edit text-dark"></i></a>
-										<a href="#"><i class="fas fa-trash text-dark"></i></a>
+										<a href="#" data-toggle="modal" data-target="#updateCust"><i class="fas fa-edit text-dark"></i></a>
+										<a href="#" data-toggle="modal" data-target="#deleteCust"><i class="fas fa-trash text-dark"></i></a>
 									</td>
 								</tr>
-								<tr>
-									<td>123</td>
-									<td>John Fitzgerald</td>
-									<td>Smith</td>
-									<td>Male</td>
-									<td>Wall Street</td>
-									<td>487-874-845</td>
-									<td>john@gmail.com</td>
-									<td>3</td>
-									<td class="text-center">
-										<a href="#"><i class="fas fa-edit text-dark"></i></a>
-										<a href="#"><i class="fas fa-trash text-dark"></i></a>
-									</td>
-								</tr>
-								<tr>
-									<td>123</td>
-									<td>John Fitzgerald</td>
-									<td>Smith</td>
-									<td>Male</td>
-									<td>Wall Street</td>
-									<td>487-874-845</td>
-									<td>john@gmail.com</td>
-									<td>3</td>
-									<td class="text-center">
-										<a href="#"><i class="fas fa-edit text-dark"></i></a>
-										<a href="#"><i class="fas fa-trash text-dark"></i></a>
-									</td>
-								</tr>
-								<tr>
-									<td>123</td>
-									<td>John Fitzgerald</td>
-									<td>Smith</td>
-									<td>Male</td>
-									<td>Wall Street</td>
-									<td>487-874-845</td>
-									<td>john@gmail.com</td>
-									<td>3</td>
-									<td class="text-center">
-										<a href="#"><i class="fas fa-edit text-dark"></i></a>
-										<a href="#"><i class="fas fa-trash text-dark"></i></a>
-									</td>
-								</tr>
-								<tr>
-									<td>123</td>
-									<td>John Fitzgerald</td>
-									<td>Smith</td>
-									<td>Male</td>
-									<td>Wall Street</td>
-									<td>487-874-845</td>
-									<td>john@gmail.com</td>
-									<td>3</td>
-									<td class="text-center">
-										<a href="#"><i class="fas fa-edit text-dark"></i></a>
-										<a href="#"><i class="fas fa-trash text-dark"></i></a>
-									</td>
-								</tr>
-								<tr>
-									<td>123</td>
-									<td>John Fitzgerald</td>
-									<td>Smith</td>
-									<td>Male</td>
-									<td>Wall Street</td>
-									<td>487-874-845</td>
-									<td>john@gmail.com</td>
-									<td>3</td>
-									<td class="text-center">
-										<a href="#"><i class="fas fa-edit text-dark"></i></a>
-										<a href="#"><i class="fas fa-trash text-dark"></i></a>
-									</td>
-								</tr>
-								<tr>
-									<td>123</td>
-									<td>John Fitzgerald</td>
-									<td>Smith</td>
-									<td>Male</td>
-									<td>Wall Street</td>
-									<td>487-874-845</td>
-									<td>john@gmail.com</td>
-									<td>3</td>
-									<td class="text-center">
-										<a href="#"><i class="fas fa-edit text-dark"></i></a>
-										<a href="#"><i class="fas fa-trash text-dark"></i></a>
-									</td>
-								</tr>
-								<tr>
-									<td>123</td>
-									<td>John Fitzgerald</td>
-									<td>Smith</td>
-									<td>Male</td>
-									<td>Wall Street</td>
-									<td>487-874-845</td>
-									<td>john@gmail.com</td>
-									<td>3</td>
-									<td class="text-center">
-										<a href="#"><i class="fas fa-edit text-dark"></i></a>
-										<a href="#"><i class="fas fa-trash text-dark"></i></a>
-									</td>
-								</tr>
-								<tr>
-									<td>123</td>
-									<td>John Fitzgerald</td>
-									<td>Smith</td>
-									<td>Male</td>
-									<td>Wall Street</td>
-									<td>487-874-845</td>
-									<td>john@gmail.com</td>
-									<td>3</td>
-									<td class="text-center">
-										<a href="#"><i class="fas fa-edit text-dark"></i></a>
-										<a href="#"><i class="fas fa-trash text-dark"></i></a>
-									</td>
-								</tr>
-								<tr>
-									<td>123</td>
-									<td>John Fitzgerald</td>
-									<td>Smith</td>
-									<td>Male</td>
-									<td>Wall Street</td>
-									<td>487-874-845</td>
-									<td>john@gmail.com</td>
-									<td>3</td>
-									<td class="text-center">
-										<a href="#"><i class="fas fa-edit text-dark"></i></a>
-										<a href="#"><i class="fas fa-trash text-dark"></i></a>
-									</td>
-								</tr>
-								<tr>
-									<td>123</td>
-									<td>John Fitzgerald</td>
-									<td>Smith</td>
-									<td>Male</td>
-									<td>Wall Street</td>
-									<td>487-874-845</td>
-									<td>john@gmail.com</td>
-									<td>3</td>
-									<td class="text-center">
-										<a href="#"><i class="fas fa-edit text-dark"></i></a>
-										<a href="#"><i class="fas fa-trash text-dark"></i></a>
-									</td>
-								</tr>
-
 							</tbody>
 						</table>
-
+						<!--Modal update Customer-->
+						<form id="updateProductData">
+							<div class="modal fade" id="updateCust" tabindex="-1" role="dialog" aria-labelledby="updateProduct">
+								<div class="modal-dialog" role="document">
+									<div class="modal-content">
+										<div class="modal-header">
+											<button type="button" class="close ml-0" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+											<h4 class="modal-title" id="updateProduct">Update Product</h4>
+										</div>
+										<div class="modal-body">
+											<div id="datos_ajax_update"></div>
+											<div class="form-group">
+												<input type="number" class="form-control" id="idProductUpd" name="idProductUpd" placeholder="ID" hidden>
+											</div>
+											<div class="form-group">
+												<input type="text" class="form-control" id="productCodeUpd" name="productCodeUpd" placeholder="Product Code" required>
+											</div>
+											<div class="form-group">
+												<input type="text" class="form-control" id="nameProductUpd" name="nameProductUpd" placeholder="Product Name" required>
+											</div>
+											<div class="form-group">
+												<input type="text" class="form-control" id="brandIDUpd" name="brandIDUpd" placeholder="Brand ID" required>
+											</div>
+											<div class="form-group">
+												<input type="number" class="form-control" id="quantityUpd" name="quantityUpd" placeholder="Quantity" required>
+											</div>
+											<div class="form-group">
+												<input type="number" class="form-control" id="purchasePriceUpd" name="purchasePriceUpd" placeholder="Purchase Price" required>
+											</div>
+											<div class="form-group">
+												<input type="number" class="form-control" id="salePriceUpd" name="salePriceUpd" placeholder="Sale Price" required>
+											</div>
+											<div class="form-group">
+												<input type="number" class="form-control" id="unitInStockUpd" name="unitInStockUpd" placeholder="Unit in stock" required>
+											</div>
+											<div class="form-group">
+												<input type="text" class="form-control" id="CategoryIDUpd" name="CategoryIDUpd" placeholder="Category ID" required>
+											</div>
+											<div class="form-group">
+												<input type="text" class="form-control" id="SupplierIDUpd" name="SupplierIDUpd" placeholder="Supplier ID" required>
+											</div>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+											<button type="submit" class="btn btn-primary">Update Product</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</form>
+						<!-- / Modal update Product-->
+						<!--Modal delete Product-->
+						<form id="deleteProductData">
+							<div class="modal fade" id="deleteCust" tabindex="-1" role="dialog" aria-labelledby="deleteProduct">
+								<div class="modal-dialog" role="document">
+									<div class="modal-content">
+										<div class="modal-header">
+											<input type="hidden" id="IdProductDel" name="IdProductDel">
+											<h4 class="modal-title mt-3" id="deleteProduct">Delete confirmation</h4>
+										</div>
+										<div class="modal-body">
+											<p class="lead text-muted text-center m-2">
+												Are you sure you want to permanently delete this product?
+											</p>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+											<button type="submit" class="btn btn-primary">Yes</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</form>
+						<!-- / Modal delete Product-->
 					</div>
 				</div>
 			</div>
